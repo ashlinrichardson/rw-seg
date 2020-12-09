@@ -12,3 +12,6 @@ Terse approach to segmenting random walk data
 
 ## counts on regularly spaced square grid, normalized to [0, 1] with respect to each label
 <img src="doc/dens.png" width="640">
+
+## code
+<img src="doc/code.png" width="640">
