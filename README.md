@@ -14,4 +14,4 @@ Terse approach to segmenting random walk data
 <img src="doc/dens.png" width="640">
 
 ## code
-<img src="doc/code.png" width="640">
+<img src="doc/code.png" width="360">
