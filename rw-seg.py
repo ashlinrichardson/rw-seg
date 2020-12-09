@@ -19,22 +19,21 @@ print(nx, ny)
 # plot the random walk
 plt.plot(x,y)
 plt.xlim([0, xmax])
-plt.ylim([0, ymax])
-plt.title('random walk')
+plt.ylim([0, ymax]) # plt.title('random walk')
 plt.tight_layout()
-plt.savefig('walk.png')
+plt.savefig('doc/walk.png')
 
 # bin the observations
 Z = np.zeros((ny, nx))
 for i in range(0, len(x)):
-    xi = math.floor(x[i] / dx)
-    yi = math.floor(y[i] / dx)
+    xi = math.floor((x[i] + 0.5) / dx)
+    yi = math.floor((y[i] + 0.5) / dx)
     Z[yi, xi] += 1
 
 plt.figure()
 plt.pcolor(Z)
 plt.tight_layout()
-plt.savefig('count.png')
+plt.savefig('doc/count.png')
 
 my_label, next_label, dens = np.zeros((ny, nx)), 1, {}
 
@@ -71,7 +70,7 @@ for i in range(0, ny):
 plt.figure()
 plt.pcolor(my_label)
 plt.tight_layout()
-plt.savefig('label.png')
+plt.savefig('doc/label.png')
 
 for i in range(0, ny):
     for j in range(0, nx):
@@ -81,4 +80,4 @@ for i in range(0, ny):
 plt.figure()
 plt.pcolor(Z)
 plt.tight_layout()
-plt.savefig('dens.png')
+plt.savefig('doc/dens.png')
